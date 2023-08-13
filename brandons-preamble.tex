@@ -1,0 +1,398 @@
+% This is the preamble I use for most my LaTeX
+% Partially used https://github.com/chry-santhemum/hitchhiker/blob/main/scorpius.sty
+
+%%%%%%% NOTES %%%%%%%
+
+% To disable custom styling, add "\defin\nosty{}" before inputing this file
+
+
+
+
+%%%%%%% IMPORT %%%%%%%
+
+% mathematical symbols
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+
+% for dummy text
+\usepackage{lipsum}
+
+% graphics
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% change enumerate/itemize
+\usepackage[shortlabels]{enumitem}
+
+% coloring
+\usepackage{xcolor}
+
+
+
+
+%%%%%%% FONTS %%%%%%
+
+\renewcommand{\AA}{\mathbb{A}}
+\newcommand{\BB}{\mathbb{B}} 
+\newcommand{\CC}{\mathbb{C}} 
+\newcommand{\CP}{\mathbb{CP}} 
+\newcommand{\DD}{\mathbb{D}} 
+\newcommand{\EE}{\mathbb{E}} 
+\newcommand{\FF}{\mathbb{F}} 
+\newcommand{\GG}{\mathbb{G}} 
+\newcommand{\HH}{\mathbb{H}} 
+\newcommand{\ii}{\mathbb{i}} 
+\newcommand{\II}{\mathbb{I}} 
+\newcommand{\KK}{\mathbb{K}} 
+\newcommand{\LL}{\mathbb{L}} 
+\newcommand{\MM}{\mathbb{M}} 
+\newcommand{\NN}{\mathbb{N}} 
+\newcommand{\OO}{\mathbb{O}} 
+\newcommand{\PP}{\mathbb{P}} 
+\newcommand{\QQ}{\mathbb{Q}} 
+\newcommand{\RR}{\mathbb{R}} 
+\newcommand{\RP}{\mathbb{RP}} 
+\newcommand{\TT}{\mathbb{T}} 
+\newcommand{\UU}{\mathbb{U}} 
+\newcommand{\VV}{\mathbb{V}} 
+\newcommand{\XX}{\mathbb{X}} 
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\be}{\mathbf{e}}
+% \newcommand{\bf}{\mathbf{f}}
+\newcommand{\bg}{\mathbf{g}}
+\newcommand{\bh}{\mathbf{h}}
+\newcommand{\bi}{\mathbf{i}}
+\newcommand{\bj}{\mathbf{j}}
+\newcommand{\bk}{\mathbf{k}}
+\newcommand{\bl}{\mathbf{l}}
+\newcommand{\bm}{\mathbf{m}}
+\newcommand{\bn}{\mathbf{n}}
+\newcommand{\bo}{\mathbf{o}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bq}{\mathbf{q}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bs}{\mathbf{s}}
+\newcommand{\bt}{\mathbf{t}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bz}{\mathbf{z}} 
+
+\newcommand{\A}{\mathcal{A}} 
+\newcommand{\B}{\mathcal{B}} 
+\newcommand{\C}{\mathcal{C}} 
+\newcommand{\T}{\mathcal{T}} 
+\newcommand{\U}{\mathcal{U}} 
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+\newcommand{\ca}{\mathcal{a}}
+\newcommand{\cb}{\mathcal{b}}
+\newcommand{\cc}{\mathcal{c}}
+\newcommand{\cd}{\mathcal{d}}
+\newcommand{\ce}{\mathcal{e}}
+\newcommand{\cf}{\mathcal{f}}
+\newcommand{\cg}{\mathcal{g}}
+\newcommand{\ch}{\mathcal{h}}
+\newcommand{\ci}{\mathcal{i}}
+\newcommand{\cj}{\mathcal{j}}
+\newcommand{\ck}{\mathcal{k}}
+\newcommand{\cl}{\mathcal{l}}
+\newcommand{\cm}{\mathcal{m}}
+\newcommand{\cn}{\mathcal{n}}
+\newcommand{\co}{\mathcal{o}}
+\newcommand{\cp}{\mathcal{p}}
+\newcommand{\cq}{\mathcal{q}}
+% \newcommand{\cr}{\mathcal{r}}
+\newcommand{\cs}{\mathcal{s}}
+\newcommand{\ct}{\mathcal{t}}
+\newcommand{\cu}{\mathcal{u}}
+\newcommand{\cv}{\mathcal{v}}
+\newcommand{\cw}{\mathcal{w}}
+\newcommand{\cx}{\mathcal{x}}
+\newcommand{\cy}{\mathcal{y}}
+\newcommand{\cz}{\mathcal{z}}
+
+\newcommand{\fA}{\mathfrak{A}}
+\newcommand{\fB}{\mathfrak{B}}
+\newcommand{\fC}{\mathfrak{C}}
+\newcommand{\fD}{\mathfrak{D}}
+\newcommand{\fE}{\mathfrak{E}}
+\newcommand{\fF}{\mathfrak{F}}
+\newcommand{\fG}{\mathfrak{G}}
+\newcommand{\fH}{\mathfrak{H}}
+\newcommand{\fI}{\mathfrak{I}}
+\newcommand{\fJ}{\mathfrak{J}}
+\newcommand{\fK}{\mathfrak{K}}
+\newcommand{\fL}{\mathfrak{L}}
+\newcommand{\fM}{\mathfrak{M}}
+\newcommand{\fN}{\mathfrak{N}}
+\newcommand{\fO}{\mathfrak{O}}
+\newcommand{\fP}{\mathfrak{P}}
+\newcommand{\fQ}{\mathfrak{Q}}
+\newcommand{\fR}{\mathfrak{R}}
+\newcommand{\fS}{\mathfrak{S}}
+\newcommand{\fT}{\mathfrak{T}}
+\newcommand{\fU}{\mathfrak{U}}
+\newcommand{\fV}{\mathfrak{V}}
+\newcommand{\fW}{\mathfrak{W}}
+\newcommand{\fX}{\mathfrak{X}}
+\newcommand{\fY}{\mathfrak{Y}}
+\newcommand{\fZ}{\mathfrak{Z}}
+\newcommand{\fa}{\mathfrak{a}}
+\newcommand{\fb}{\mathfrak{b}}
+\newcommand{\fc}{\mathfrak{c}}
+\newcommand{\fd}{\mathfrak{d}}
+\newcommand{\fe}{\mathfrak{e}}
+\newcommand{\ff}{\mathfrak{f}}
+\newcommand{\fg}{\mathfrak{g}}
+\newcommand{\fh}{\mathfrak{h}}
+% \newcommand{\fi}{\mathfrak{i}}
+\newcommand{\fj}{\mathfrak{j}}
+\newcommand{\fk}{\mathfrak{k}}
+\newcommand{\fl}{\mathfrak{l}}
+\newcommand{\fm}{\mathfrak{m}}
+\newcommand{\fn}{\mathfrak{n}}
+\newcommand{\fo}{\mathfrak{o}}
+\newcommand{\fp}{\mathfrak{p}}
+\newcommand{\fq}{\mathfrak{q}}
+\newcommand{\fr}{\mathfrak{r}}
+\newcommand{\fs}{\mathfrak{s}}
+\newcommand{\ft}{\mathfrak{t}}
+\newcommand{\fu}{\mathfrak{u}}
+\newcommand{\fv}{\mathfrak{v}}
+\newcommand{\fw}{\mathfrak{w}}
+\newcommand{\fx}{\mathfrak{x}}
+\newcommand{\fy}{\mathfrak{y}}
+\newcommand{\fz}{\mathfrak{z}}
+
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+\newcommand{\sa}{\mathscr{a}}
+% \newcommand{\sb}{\mathscr{b}}
+% \newcommand{\sc}{\mathscr{c}}
+\newcommand{\sd}{\mathscr{d}}
+\newcommand{\se}{\mathscr{e}}
+% \newcommand{\sf}{\mathscr{f}}
+\newcommand{\sg}{\mathscr{g}}
+\newcommand{\sh}{\mathscr{h}}
+\newcommand{\si}{\mathscr{i}}
+\newcommand{\sj}{\mathscr{j}}
+\newcommand{\sk}{\mathscr{k}}
+% \newcommand{\sl}{\mathscr{l}}
+\newcommand{\sm}{\mathscr{m}}
+\newcommand{\sn}{\mathscr{n}}
+% \newcommand{\so}{\mathscr{o}}
+% \newcommand{\sp}{\mathscr{p}}
+\newcommand{\sq}{\mathscr{q}}
+\newcommand{\sr}{\mathscr{r}}
+% \newcommand{\ss}{\mathscr{s}}
+\newcommand{\st}{\mathscr{t}}
+\newcommand{\su}{\mathscr{u}}
+\newcommand{\sv}{\mathscr{v}}
+\newcommand{\sw}{\mathscr{w}}
+\newcommand{\sx}{\mathscr{x}}
+\newcommand{\sy}{\mathscr{y}}
+\newcommand{\sz}{\mathscr{z}}
+
+
+
+
+
+
+%%%%%%% THEOREMS %%%%%%%
+
+\theoremstyle{definition}
+    \newtheorem{defn}{Definition}[subsection]
+    \newtheorem{exm}[defn]{Example}
+    \newtheorem{notn}[defn]{Notation}
+    \newtheorem{prb}{Problem}[subsection]
+    \newtheorem{exr}[prb]{Exercise}
+    \newtheorem{que}[prb]{Question}
+    \newtheorem*{Defn}{Definition}
+    \newtheorem*{Exm}{Example}
+    \newtheorem*{Notn}{Notation}
+    \newtheorem*{Prb}{Problem}
+    \newtheorem*{Exr}{Exercise}
+    \newtheorem*{Que}{Question}
+\theoremstyle{plain}
+    \newtheorem{thm}{Theorem}[subsection]
+    \newtheorem{lem}[thm]{Lemma}
+    \newtheorem{prop}[thm]{Proposition}
+    \newtheorem{cor}[thm]{Corollary}
+    \newtheorem{clm}[thm]{Claim}
+    \newtheorem{fac}[thm]{Fact}
+    \newtheorem*{Thm}{Theorem}
+    \newtheorem*{Lem}{Lemma}
+    \newtheorem*{Prop}{Proposition}
+    \newtheorem*{Cor}{Corollary}
+    \newtheorem*{Clm}{Claim}
+    \newtheorem*{Fac}{Fact}
+\theoremstyle{remark}
+    \newtheorem*{Rem}{Remark}
+    \newtheorem*{Note}{Note}
+
+% Add proof-like environments
+% \newenvironment{rsn}{\renewcommand{\proofname}{Reasoning}\begin{proof}}{\end{proof}}
+% \newenvironment{slt}{\renewcommand{\proofname}{Solution}\begin{proof}}{\end{proof}}
+
+% Remove 0 subsection numbers:
+%   Definition 1.1 instead of Definition 1.0.1
+
+\makeatletter
+\@addtoreset{equation}{section}
+\renewcommand{\thesubsection}{%
+  \ifnum\c@subsection<1 \@arabic\c@section
+  \else \thesection.\@arabic\c@subsection
+  \fi
+}
+\makeatother
+
+
+
+
+%%%%%%% COMMANDS %%%%%%%
+
+\newcommand{\cross}{^{\times}}
+\newcommand{\dual}{^{\vee}}
+\newcommand{\bul}{\bullet}
+\newcommand{\xto}{\xrightarrow}
+\newcommand{\xfrom}{\xleftarrow}
+\renewcommand{\d}[2]{\frac{d #1}{d #2}}
+\newcommand{\pard}[2]{\frac{\partial #1}{\partial #2}}
+\renewcommand{\bar}{\overline}
+\newcommand{\exist}{\exists\thinspace}
+\newcommand{\all}{\forall\thinspace}
+\newcommand{\symmdif}{\thinspace \triangle \thinspace}
+\newcommand{\restr}[1]{\vert_{#1}} 
+\newcommand{\mang}{\measuredangle} 
+\renewcommand{\emptyset}{\varnothing} 
+\renewcommand{\div}{\operatorname{div}}
+\newcommand{\actson}{\curvearrowright} 
+\newcommand{\degrees}{^{\circ}} 
+\newcommand{\sumcyc}{\sum_{\textrm{cyc}}} 
+\newcommand{\sumsym}{\sum_{\textrm{sym}}} 
+\newcommand{\jacobi}[2]{\left( \frac{#1}{#2} \right)} 
+\newcommand{\given}{\Longleftarrow} 
+\newcommand{\into}{\hookrightarrow} 
+\newcommand{\onto}{\twoheadrightarrow} 
+\newcommand{\proj}{\twoheadrightarrow} 
+\newcommand{\eps}{\varepsilon}  
+\newcommand{\ul}{\underline} 
+\newcommand{\wt}{\widetilde} 
+\newcommand{\wh}{\widehat} 
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}} 
+\newcommand{\nrt}[1]{\sqrt[n]{#1}} 
+\newcommand{\lexp}[2]{\vphantom{#2}^{#1} #2}
+\renewcommand{\vec}{\overrightarrow} 
+\newcommand{\vect}{\mathbf}
+\renewcommand{\iff}{\Longleftrightarrow}
+\renewcommand{\implies}{\Longrightarrow}
+\newcommand{\angles}[1]{\langle #1 \rangle}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil} 
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor} 
+\newcommand{\abs}[1]{\left | #1 \right |}  
+\newcommand{\norm}[1]{\left\| #1 \right\|} 
+\newcommand{\dec}[1]{\left\{ #1 \right\}} 
+\newcommand{\pr}[1]{\left( #1 \right)}
+\newcommand{\diff}{\mathop{}\!\mathrm{d}}
+\newcommand{\Diff}[1]{\mathop{}\!\mathrm{d^#1}}
+
+
+
+
+
+%%%%%%% OPERATORS %%%%%%%
+
+\DeclareMathOperator{\Aut}{Aut} 
+\DeclareMathOperator{\characteristic}{char}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Ker}{Ker} 
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\sgn}{sgn} 
+
+
+
+
+
+
+%%%%%%% STYLING %%%%%%%
+
+\makeatletter
+\@ifclassloaded{article}{%
+\ifx\nosty\undefined
+
+% decrease margin
+\usepackage[margin=1in]{geometry}
+
+% change paragraph spacing
+\usepackage[skip=10pt]{parskip}
+\setlength{\parindent}{0em}
+
+% clean up title
+\usepackage{titling}
+\setlength{\droptitle}{-60pt}
+\pretitle{\noindent \huge} \posttitle{\newline\newline}
+\preauthor{\large} \postauthor{\newline}
+\predate{\large} \postdate{}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\fi%
+}{}
+\makeatother
