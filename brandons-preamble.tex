@@ -1,5 +1,5 @@
 % This is the preamble I use for most my LaTeX
-% Partially used https://github.com/chry-santhemum/hitchhiker/blob/main/scorpius.sty
+% Partially used https://github.com/chry-santhemum/hitchhiker
 
 %%%%%%% NOTES %%%%%%%
 
@@ -26,7 +26,8 @@
 % coloring
 \usepackage{xcolor}
 
-
+% for avoiding hbox warnings
+\usepackage[]{microtype}
 
 
 %%%%%%% FONTS %%%%%%
@@ -286,8 +287,8 @@
     \newtheorem*{Note}{Note}
 
 % Add proof-like environments
-% \newenvironment{rsn}{\renewcommand{\proofname}{Reasoning}\begin{proof}}{\end{proof}}
-% \newenvironment{slt}{\renewcommand{\proofname}{Solution}\begin{proof}}{\end{proof}}
+\newenvironment{rsn}{\renewcommand{\proofname}{Reasoning}\begin{proof}}{\end{proof}}
+\newenvironment{slt}{\renewcommand{\proofname}{Solution}\begin{proof}}{\end{proof}}
 
 % Remove 0 subsection numbers:
 %   Definition 1.1 instead of Definition 1.0.1
