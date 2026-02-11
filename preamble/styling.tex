@@ -1,0 +1,69 @@
+\makeatletter
+\@ifclassloaded{article}{%
+\ifx\optionNoStyling\undefined
+
+    % decrease margin
+    \usepackage[margin=0.75in]{geometry}
+
+    % change font of captions
+    \usepackage[font=small,labelfont=bf]{caption}
+
+    % enumeration style
+    \setlist[enumerate,1]{label=(\arabic*)}
+
+    % change paragraph spacing
+    % \usepackage[skip=10pt]{parskip}
+    % \setlength{\parindent}{0em}
+
+    % set color of links
+    % https://tex.stackexchange.com/questions/50747/options-for-appearance-of-links-in-hyperref
+    \hypersetup{
+        colorlinks=true,
+        urlcolor=Blue,
+        linkcolor=BrickRed
+    }
+
+    % lstlistings styles
+    \lstset{
+    basicstyle=\ttfamily,
+    breaklines=true,
+    }
+
+    % clean up title
+    \usepackage{titling}
+    \setlength{\droptitle}{-60pt}
+    \pretitle{\noindent \huge}
+    \posttitle{\newline}
+    \preauthor{\large} \postauthor{\newline}
+    \predate{\large} \postdate{}
+
+    \renewcommand\qedsymbol{$\blacksquare$}
+
+    % change font
+    % \usepackage{mlmodern}
+    % \usepackage[light,math]{anttor}
+    % \usepackage[adobe-utopia]{mathdesign}
+
+    \usepackage[T1]{fontenc}
+
+    % add mandelbrot set background
+    \ifdef{\optionEnableBgImage}{
+        \AddToHook{shipout/background}{
+            \begin{tikzpicture}[remember picture,overlay]
+                \node at (current page.center) {
+                    \includegraphics[height=\paperheight]{mandelbrot-bg}
+                };
+            \end{tikzpicture}
+        }
+    }{}
+\fi%
+}{}
+
+\@ifclassloaded{beamer}{%
+\ifx\nosty\undefined
+
+    \usetheme[style=light]{Nord}
+
+\fi%
+}{}
+\makeatother

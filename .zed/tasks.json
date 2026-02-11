@@ -1,0 +1,14 @@
+[
+  {
+    "label": "build once",
+    "command": "latexmk ./examples/example-article.tex -xelatex -outdir=$ZED_WORKTREE_ROOT/out"
+  },
+  {
+    "label": "build continuously",
+    "command": "latexmk ./examples/example-article.tex -xelatex -outdir=$ZED_WORKTREE_ROOT/out -pvc"
+  },
+  {
+    "label": "copy preamble to ~/texmf/...",
+    "command": "cd ./preamble; latexpand ./brandons-preamble.tex > ../expanded/brandons-preamble.sty; rm ~/texmf/tex/latex/brandons-preamble.sty; cp ../expanded/brandons-preamble.sty ~/texmf/tex/latex/brandons-preamble.sty; texhash ~/texmf"
+  }
+]

@@ -1,0 +1,62 @@
+% mathematical symbols
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+\usepackage{mathtools}
+
+% for dummy text
+\usepackage{lipsum}
+
+% other colors
+\usepackage[dvipsnames]{xcolor}
+
+% graphics
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% change enumerate/itemize, does not work with beamer
+\makeatletter
+  \@ifclassloaded{article}{%
+    \usepackage[shortlabels]{enumitem}%
+    \setlist{
+        listparindent=\parindent,
+        parsep=0pt,
+    }
+  }{}
+\makeatother
+
+
+
+% for avoiding hbox warnings
+\usepackage[]{microtype}
+
+% for adding columns
+\usepackage{multicol}
+
+% links
+\usepackage{hyperref}
+
+% code
+\usepackage{listings}
+
+% for colored boxes
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% misc. LaTeX friendly wrappers
+\usepackage{etoolbox}
+
+% better floating graphics
+\usepackage{float}
+
+% for referencing
+\usepackage[capitalize,nameinlink]{cleveref}
+
+% so one can make greek letters bold
+\usepackage{bm}
+
+% rename \bm command to \bbm, and set \bm to undefined
+% later \bm is defined to \mathbb{m}.
+\NewCommandCopy\bbm\bm
+\RenewCommandCopy\bbm\bm
+\DeclareCommandCopy\bbm\bm
+
+\let\bm\undefined

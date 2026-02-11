@@ -1,0 +1,249 @@
+
+\makeatletter
+\@ifclassloaded{article}{%
+
+\ifundef{\optionNoStyling}{
+\ifundef{\optionNoTheoremColoring}{
+\ifundef{\optionTheoremColoringGray}{
+
+    \ifundef{\optionTheoremLessColoring}{
+        % settings
+        \tcbset{enhanced,breakable,before skip=10pt,after skip=10pt}
+
+        \tcolorboxenvironment{theorem}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=BlueViolet!60!white,
+                right color=NavyBlue!90!black
+            }
+        }{}
+        \tcolorboxenvironment{theorem*}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=BlueViolet!60!white,
+                right color=NavyBlue!90!black
+            }
+        }{}
+
+        \tcolorboxenvironment{lemma}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=BlueViolet!60!white,
+                right color=NavyBlue!90!black
+            }
+        }{}
+        \tcolorboxenvironment{lemma*}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=BlueViolet!60!white,
+                right color=NavyBlue!90!black
+            }
+        }{}
+
+        \tcolorboxenvironment{corollary}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=BlueViolet!60!white,
+                right color=NavyBlue!90!black
+            }
+        }{}
+        \tcolorboxenvironment{corollary*}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=BlueViolet!60!white,
+                right color=NavyBlue!90!black
+            }
+        }{}
+
+        \tcolorboxenvironment{problem}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=YellowOrange!80!black,
+                right color=RedOrange!80!black
+            }
+        }{}
+        \tcolorboxenvironment{problem*}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=YellowOrange!80!black,
+                right color=RedOrange!80!black
+            }
+        }{}
+
+        \tcolorboxenvironment{definition}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=cyan!75!black,
+                right color=Emerald!70!black
+            }
+        }{}
+        \tcolorboxenvironment{definition*}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=cyan!75!black,
+                right color=Emerald!70!black
+            }
+        }{}
+
+        \tcolorboxenvironment{example}{
+            interior style={white,opacity=0.9},
+            frame style={
+                left color=Mulberry!60!black,
+                right color=RubineRed!60!black
+            }
+        }{}
+        \tcolorboxenvironment{example*}{
+            interior style={white,opacity=0.9},
+            frame style={
+                left color=Mulberry!60!black,
+                right color=RubineRed!60!black
+            }
+        }{}
+
+        \tcolorboxenvironment{remark}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=Red!60!white,
+                right color=OrangeRed!60!white
+            }
+        }{}
+        \tcolorboxenvironment{remark*}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=Red!60!white,
+                right color=OrangeRed!60!white
+            }
+        }{}
+    }{
+        \tcbset{enhanced,breakable,before skip=10pt,after skip=10pt}
+
+        \tcolorboxenvironment{theorem}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=BlueViolet!60!white,
+                right color=NavyBlue!90!black
+            }
+        }{}
+        \tcolorboxenvironment{theorem*}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=BlueViolet!60!white,
+                right color=NavyBlue!90!black
+            }
+        }{}
+
+        \tcolorboxenvironment{lemma}{
+            colframe=white!40!black,
+            colback=black!5!white}{}
+        \tcolorboxenvironment{lemma*}{
+            colframe=white!40!black,
+            colback=black!5!white}{}
+
+        \tcolorboxenvironment{corollary}{
+            colframe=white!40!black,
+            colback=black!5!white}{}
+        \tcolorboxenvironment{corollary*}{
+            colframe=white!40!black,
+            colback=black!5!white}{}
+
+        \tcolorboxenvironment{problem}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=YellowOrange!80!black,
+                right color=RedOrange!80!black
+            }
+        }{}
+        \tcolorboxenvironment{problem*}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=YellowOrange!80!black,
+                right color=RedOrange!80!black
+            }
+        }{}
+
+        \tcolorboxenvironment{definition}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=cyan!75!black,
+                right color=Emerald!70!black
+            }
+        }{}
+        \tcolorboxenvironment{definition*}{
+            interior style={white,opacity=0.85},
+            frame style={
+                left color=cyan!75!black,
+                right color=Emerald!70!black
+            }
+        }{}
+
+        \tcolorboxenvironment{example}{
+            colframe=white!40!black,
+            colback=black!5!white}{}
+        \tcolorboxenvironment{example*}{
+            colframe=white!40!black,
+            colback=black!5!white}{}
+
+        \tcolorboxenvironment{remark}{
+            colframe=white!40!black,
+            colback=black!5!white}{}
+        \tcolorboxenvironment{remark*}{
+            colframe=white!40!black,
+            colback=black!5!white}{}
+    }
+}{
+    \tcbset{enhanced,breakable,before skip=10pt,after skip=10pt}
+
+    \tcolorboxenvironment{theorem}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+    \tcolorboxenvironment{theorem*}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+
+    \tcolorboxenvironment{lemma}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+    \tcolorboxenvironment{lemma*}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+
+    \tcolorboxenvironment{corollary}{
+            colframe=white!40!black,
+            colback=black!5!white}{}
+    \tcolorboxenvironment{corollary*}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+
+    \tcolorboxenvironment{problem}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+    \tcolorboxenvironment{problem*}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+
+    \tcolorboxenvironment{definition}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+    \tcolorboxenvironment{definition*}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+
+    \tcolorboxenvironment{example}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+    \tcolorboxenvironment{example*}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+
+    \tcolorboxenvironment{remark}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+    \tcolorboxenvironment{remark*}{
+        colframe=white!40!black,
+        colback=black!5!white}{}
+}
+}{}
+}{}
+
+}
+\makeatother

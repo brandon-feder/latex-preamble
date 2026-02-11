@@ -1,0 +1,48 @@
+
+\makeatletter
+\@ifclassloaded{article}{%
+
+\theoremstyle{definition}
+
+\ifdef{\optionThrmNumberingBySubsection}{
+    \newtheorem{theorem}{Theorem}[subsection]
+}{
+    \ifdef{\optionThrmNumberingBySection}{
+        \newtheorem{theorem}{Theorem}[section]
+    }{
+        \newtheorem{theorem}{Theorem}
+    }
+}
+
+
+\newtheorem*{theorem*}{Theorem}
+
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{definition*}{Definition}
+
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{lemma*}{Lemma}
+
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{corollary*}{Corollary}
+
+\newtheorem{example}[theorem]{Example}
+\newtheorem*{example*}{Example}
+
+\ifdef{\probNumberingSeperate}{
+    \newcounter{probcounter}
+    \newtheorem{problem}[probcounter]{Problem}
+}{
+    \newtheorem{problem}[theorem]{Problem}
+}
+
+\newtheorem*{problem*}{Problem}
+
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{remark*}{Remark}
+
+\newenvironment{solution}{\renewcommand{\proofname}{Solution}\begin{proof}}{\end{proof}}
+% \newenvironment{remark}{\renewcommand{\proofname}{Remark}\begin{proof}}{\end{proof}}
+
+}{}
+\makeatother
